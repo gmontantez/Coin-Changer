@@ -1,5 +1,15 @@
 def coin_changer(cents)
 	coins = {}
+	# if cents >= 25
+	# 	coins["quarter"] = cents / 25
+	# 	cents = cents % 25
+	# end
+
+	if cents >= 10
+		coins["dime"] = cents / 10
+		cents = cents % 10
+	end
+
 	if cents >= 5
 		coins["nickel"] = cents / 5
 		cents = cents % 5
