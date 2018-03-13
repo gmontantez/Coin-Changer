@@ -42,6 +42,10 @@ class Codeword_exercise < Minitest::Test
 		call_hash = coin_changer(31)
 		assert_equal({"quarter" => 1, "nickel" => 1, "penny" => 1}, call_hash)
 	end
+	def test_for_93_cents_3_quarter_one_dime_one_nickel_three_penny
+		call_hash = coin_changer(93)
+		assert_equal({"quarter" => 3, "dime" => 1, "nickel" => 1, "penny" => 3}, call_hash)
+	end
 
 
 end
