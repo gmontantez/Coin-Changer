@@ -10,6 +10,7 @@ class Codeword_exercise < Minitest::Test
 		call_hash = coin_changer(11) 
 		assert_equal(Hash, call_hash.class)
 	end
+	
 	def test_for_one_cent_one_penny
 		call_hash = coin_changer(1)
 		assert_equal({"penny" => 1 }, call_hash)
@@ -46,6 +47,44 @@ class Codeword_exercise < Minitest::Test
 		call_hash = coin_changer(93)
 		assert_equal({"quarter" => 3, "dime" => 1, "nickel" => 1, "penny" => 3}, call_hash)
 	end
+	def test_for_89_cents_3_quarter_one_dime_one_nickel_three_penny
+		call_hash = coin_changer(89)
+		assert_equal({"quarter" => 3, "dime" => 1, "nickel" => 0, "penny" => 4}, call_hash)
+	end
+	# def test_for_hash_test
+	# 	call_hash = plural_coin({"quarters" => 2}) 
+	# 	assert_equal(Hash, call_hash.class)
+	# end
+	# def test_for_plural_quarter
+	# 	hash_test = {"quarter" => 2} 
+	# 	assert_equal({"quarters" => 2}, plural_coin(hash_test))
+	# end
+	# def test_for_plural_dime
+	# 	hash_test = {"dime" => 2} 
+	# 	assert_equal({"dimes" => 2}, plural_coin(hash_test))
+	# end
+	# def test_for_plural_all_twos
+	# 	hash_test = {"quarter" => 2, "dime" => 2, "nickel" => 2, "penny" => 2} 
+	# 	assert_equal({"quarters" => 2, "dimes" => 2, "nickels" => 2, "pennies" => 2}, plural_coin(hash_test))
+	# end
+	# def test_for_plural_all_zero
+	# 	hash_test = {"quarter" => 0, "dime" => 0, "nickel" => 0, "penny" => 0} 
+	# 	assert_equal({"quarters" => 0, "dimes" => 0, "nickels" => 0, "pennies" => 0}, plural_coin(hash_test))
+	# end
+	# def test_for_59_cents
+	# 	hash_test = {"quarter" => 2, "dime" => 0, "nickel" => 1, "penny" => 4} 
+	# 	assert_equal({"quarters" => 2, "dimes" => 0, "nickel" => 1, "pennies" => 4}, plural_coin(hash_test))
+	# end
+	# def test_for_all_ones
+	# 	hash_test = {"quarter" => 1, "dime" => 1, "nickel" => 1, "penny" => 1} 
+	# 	assert_equal({"quarter" => 1, "dime" => 1, "nickel" => 1, "penny" => 1}, plural_coin(hash_test))
+	# end
+	# def test_functions_working_together
+	# 	cents = 49
+	# 	#singular_hash = coin_changer(cents)
+	# 	#print singular_hash
+	# 	assert_equal({"quarter" => 1, "dime" => 2, "nickel" => 0, "penny" => 4}, coin_changer(cents))
 
-
+	# end
+	
 end

@@ -1,0 +1,37 @@
+def coin_changer(cents)
+	coins = {}
+	if cents >= 25
+		coins["quarter"] = cents / 25
+		cents = cents % 25
+		if cents > 25
+			puts "quarters"
+	end
+
+	if cents >= 10
+		coins["dime"] = cents / 10
+		cents = cents % 10
+	end
+
+	if cents >= 5
+		coins["nickel"] = cents / 5
+		cents = cents % 5
+		p cents
+	end
+
+	if cents >= 1
+		coins["penny"] = cents
+        
+	end
+	coins
+
+	def plural_coin()
+		coins_plural = {}
+		
+	end
+end
+
+
+
+
+
+
