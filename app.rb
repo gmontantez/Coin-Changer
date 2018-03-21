@@ -29,10 +29,9 @@ end
 get '/change' do
 	first_name = session[:first_name]
 	last_name = session[:last_name]
-	cents = session[:cents]
-	session[:results] = coin_changer(cents.to_i)
-	p session[:results]
-	erb :change, locals:{first_name: first_name, last_name: last_name, cents: cents, results: session[:results]}
+	singular_coins = coin_changer(session[:cents].to_i)
+	session[:results] = plural_coin(singular_coins)
+	erb :change, locals:{first_name: first_name, last_name: last_name, cents: session[:cents], results: session[:results]}
 end
 
 

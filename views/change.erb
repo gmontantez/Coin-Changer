@@ -1,6 +1,7 @@
-<h2><%=first_name%> <%=last_name%>, your change amount is: 
-<font color="#ff0000"><%= results %></h2></font>
-<font color="#8000ff"><h3>Input a new amount in the box provided below to find a different change amount:</h3></font>
+<h2><%=first_name%> <%=last_name%>, your change amount is:</h2>
+<% results.each_pair do |key, value| %>
+<h3><font color="#ff0000"><%=key%>: <%=value%></font></h3>
+<%end%><font color="#8000ff"><h3>Input a new amount in the box provided below to find a different change amount:</h3></font>
 
 <form method="post" action="coins">
 	<input type="number" name="cents">
